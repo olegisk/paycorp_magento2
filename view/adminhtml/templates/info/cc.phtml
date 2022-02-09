@@ -1,0 +1,11 @@
+<?php
+// @codingStandardsIgnoreFile
+/**
+ * @var $block \Paycorp\Payments\Block\Info\Cc
+ */
+?>
+<?php
+$_info = $block->getInfo();
+?>
+
+<p><?php echo $block->escapeHtml($block->getMethod()->getTitle()) ?></p>

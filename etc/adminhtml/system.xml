@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="paycorp_cc" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Paycorp Payments</label>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>payment/paycorp_cc/active</config_path>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                    <config_path>payment/paycorp_cc/title</config_path>
+                </field>
+
+                <field id="pg_domain" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>PG Domain</label>
+                    <config_path>payment/paycorp_cc/pg_domain</config_path>
+                </field>
+
+                <field id="client_id" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client ID</label>
+                    <config_path>payment/paycorp_cc/client_id</config_path>
+                </field>
+
+                <field id="hmac_secret" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>HMAC Secret</label>
+                    <config_path>payment/paycorp_cc/hmac_secret</config_path>
+                </field>
+
+                <field id="auth_token" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Auth Token</label>
+                    <config_path>payment/paycorp_cc/auth_token</config_path>
+                </field>
+
+                <!-- <field id="transaction_type" translate="label" type="select" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Transaction Type</label>
+                    <source_model>Paycorp\Payments\Model\Config\Source\TransactionType</source_model>
+                    <config_path>payment/paycorp_cc/transaction_type</config_path>
+                </field> -->
+                <field id="transaction_type" translate="label" type="text" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Transaction Type</label>
+                    <config_path>payment/paycorp_cc/transaction_type</config_path>
+                </field>
+
+                <group id="paycorp_cc_country_specific" translate="label" showInDefault="1" showInWebsite="1" sortOrder="20">
+                    <label>Country Specific Settings</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Fieldset</frontend_model>
+                    <field id="allowspecific" translate="label" type="allowspecific" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Payment from Applicable Countries</label>
+                        <source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
+                        <config_path>payment/paycorp_cc/allowspecific</config_path>
+                    </field>
+                    <field id="specificcountry" translate="label" type="multiselect" sortOrder="51" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Payment from Specific Countries</label>
+                        <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                        <config_path>payment/paycorp_cc/specificcountry</config_path>
+                    </field>
+                </group>
+            </group>
+            <include path="Paycorp_Payments::system/promotion.xml"/>
+        </section>
+    </system>
+</config>

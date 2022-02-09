@@ -1,0 +1,13 @@
+<?php
+// @codingStandardsIgnoreFile
+/**
+ * @var $block \Paycorp\Payments\Block\Info\Cc
+ */
+?>
+<?php
+$_info = $block->getInfo();
+?>
+
+<?php echo $block->escapeHtml($block->getMethod()->getTitle()) ?>
+{{pdf_row_separator}}
+
