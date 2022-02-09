@@ -1,0 +1,20 @@
+{
+    "name": "olegisk/paycorp_magento2",
+    "description": "Paycorp payment method for Magento2",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "Apache-2.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Paycorp\\Payments\\": ""
+        }
+    },
+    "require-dev": {
+        "magento/magento-coding-standard": "^5.0"
+    }
+}
