@@ -2,6 +2,7 @@
 
 namespace Paycorp\Payments\Model\Method;
 
+use Magento\Payment\Model\Method\AbstractMethod;
 use Magento\Framework\DataObject;
 use Magento\Payment\Model\Method\ConfigInterface;
 use Magento\Payment\Model\Method\Online\GatewayInterface;
@@ -10,7 +11,7 @@ use Magento\Quote\Api\Data\PaymentInterface;
 use Magento\Sales\Model\Order\Payment\Transaction;
 use Magento\Sales\Model\Order\Payment;
 
-class Cc extends \Magento\Payment\Model\Method\AbstractMethod implements GatewayInterface
+class Cc extends AbstractMethod implements GatewayInterface
 {
     const METHOD_CODE = 'paycorp_cc';
 

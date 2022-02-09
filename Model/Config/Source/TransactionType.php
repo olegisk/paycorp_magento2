@@ -10,14 +10,14 @@ if (class_exists('\\Paycrop\\Payments\\Model\\Config\\Source\\TransactionType', 
 
 class TransactionType implements ArrayInterface
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public function toOptionArray()
-	{
-		return [
-			['value' => 'AUTHORISATION', 'label' => __('Authorization')],
-			['value' => 'PURCHASE', 'label' => __('Purchase')]
-		];
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function toOptionArray()
+    {
+        return [
+            ['value' => 'AUTHORISATION', 'label' => __('Authorization')],
+            ['value' => 'PURCHASE', 'label' => __('Purchase')]
+        ];
+    }
 }

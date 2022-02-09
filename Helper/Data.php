@@ -2,7 +2,6 @@
 
 namespace Paycorp\Payments\Helper;
 
-use Paycorp\Payments\Model\Method\Cc;
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Sales\Model\Order\Payment\Transaction;
 use Magento\Framework\DataObject;
